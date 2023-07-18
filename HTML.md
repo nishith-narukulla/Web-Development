@@ -57,11 +57,11 @@
 - **Inline:**
     - do not start on a new line
     - take only necessary width
-    - Ex: ```html <span>, <img>, <a> ```
+    - Ex: ```<span>, <img>, <a> ```
 - **Block level:**
     - start on a new line
     - take full width available
-    - Ex: ```html html <div>, <h1>...<h6>, <p>, <form> ```
+    - Ex: ```<div>, <h1>...<h6>, <p>, <form> ```
 ### anchor tag
 - for hyper links and quick links
 ```html
