@@ -221,4 +221,193 @@ order: <integer>;
 }
 ```
 
-### 
+### Grid Layout in CSS
+#### Grid properties
+```css
+display: grid;
+grid-template-columns: 70% 30%;
+/*
+sets a two column grid with 70% for first element
+and 30% for second element
+ */
+grid-template-columns: 40% 30% 30%;
+/* 
+sets an three column grid with given width
+we can use repeat(times, value) for easy use
+*/
+grid-template-columns: repeat(3, 33%);
+/* 
+instead of using percentages
+we can use fractions to define size of each element
+*/
+grid-template-columns: 1fr 2fr 1fr;
+/* 
+divides 4 parts to 3 elements
+1fr 2fr 4fr 2fr
+divides 9 parts to 4 elements
+*/
+grid-column-gap: 1em;
+grid-row-gap: 1em;
+/* 
+sets a gap between columns and rows
+we can use short form as below
+*/
+grid-gap: 1em;
+/*  we can set height */
+grid-auto-rows: 100px;
+/* this will overflow the content if exceeds */
+grid-auto-rows: auto;
+/* this will adjust to the max size of element in a row
+   all the elements in a row are at same height */
+
+/* we can use nested grids by defining 
+another child grids inside parent grids */
+
+/* we can change alignment using */
+align-items: start | end | centre | stretch(default); /* sets row wise */
+align-self: " " ; /* this will sets for the current parent grid itself*/
+justify-items: " "; /* sets column wise */
+
+/* 
+changing the position of a particular element
+Note: These rows and columns are not actual
+they are like span of the row/column
+
+1
+|1________2|________3|  <-- columns
+2
+|________|_________|
+3
+|________|_________|
+4
+
+^
+|
+rows
+
+*/
+grid-column: <number>;
+/* changes the position to the given column */
+
+grid-row: <number>;
+/* changes the position to the given row */
+
+grid-column: <column1>/<column2>;
+grid-row: <row1>/<row2>;
+/* position the element from column1 to column2 and row1 to row2 */
+``` 
+#### code
+```html
+<body>
+<div class="grid">
+        <div class="main">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est dicta autem, accusamus vero necessitatibus sapiente eveniet nulla sequi quod molestias provident aperiam voluptatem deleniti culpa, nemo odio reprehenderit et sed!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde accusantium nulla quam praesentium officiis nostrum! Inventore velit at nemo aspernatur deserunt, a, beatae eligendi voluptates molestiae voluptas ex excepturi tempore!
+        </div>
+        <!-- This is nested grid -->
+        <div class="nested-grid1">
+                <div><p>Nested Item One</p></div>
+                <div><p>Nested Item Two</p></div>
+                <div><p>Nested Item Three</p></div>
+                <div><p>Nested Item Four</p></div>
+                <div><p>Nested Item Five</p></div>
+                <div><p>Nested Item Six</p></div>
+                <div><p>Nested Item Seven</p></div>
+                <div><p>Nested Item Nine</p></div>
+        </div>
+
+        <div class="nested-grid2">
+                <div class="box box1">Nested Box 1</div>
+                <div class="box box1">Nested Box 2</div>
+                <div class="box box1">Nested Box 3</div>
+                <div class="box box1">Nested Box 4</div>
+                <div class="box box1">Nested Box 5</div>
+                <div class="box box1">Nested Box 6</div>
+                <div class="box box1">Nested Box 7</div>
+                <div class="box box1">Nested Box 8</div>
+        </div>
+
+        <!-- side bar One here -->
+        <div class="sidebar bottom-box-1">
+            <Strong>Bottom Box1:</Strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique optio vitae quas minima pariatur sit architecto ipsa ipsum dolorem.
+        </div>
+
+        <div class="main bottom-box-2">
+                <Strong>Bottom Box2:</Strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est dicta autem, accusamus vero necessitatibus sapiente eveniet nulla sequi quod molestias provident aperiam voluptatem deleniti culpa, nemo odio reprehenderit et sed!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde accusantium nulla quam praesentium officiis nostrum! Inventore velit at nemo aspernatur deserunt, a, beatae eligendi voluptates molestiae voluptas ex excepturi tempore!
+        </div>
+
+        <div class="sidebar bottom-box-3">
+                <Strong>Bottom Box3: </Strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident similique optio vitae quas minima pariatur sit architecto ipsa ipsum dolorem.
+        </div>
+</div>
+</body>
+```
+```css
+.grid .main{
+    background-color: burlywood;
+    padding: 1em;
+}
+
+.grid .sidebar{
+    background-color:coral;
+    padding: 1em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-gap: 1em;
+    grid-auto-rows: auto;
+}
+
+/* nested grid one section */
+.nested-grid1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+    grid-auto-rows: auto;
+    background-color:coral;
+    padding: 1em;
+}
+
+.grid .nested-grid1 p{
+    background-color:navajowhite;
+    padding: 1em;
+}
+
+/* nested grid two section */
+.nested-grid2{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1em;
+    grid-auto-rows: auto;
+    background-color:coral;
+    padding: 1em;
+    align-items: stretch;
+}
+
+.grid .nested-grid2 > div{
+    background-color:navajowhite;
+    padding: 1em;
+}
+
+/* bottom-box one section */
+.bottom-box-1{
+    align-self: center;
+    grid-column: 1;
+}
+
+/* bottom-box two section */
+.bottom-box-2{
+    align-self: flex-start;
+    grid-column: 3;
+}
+
+/* bottom-box three section */
+.bottom-box-3{
+    align-self: flex-end;
+    grid-column: 2;
+    grid-row: 2/3;
+}
+```
