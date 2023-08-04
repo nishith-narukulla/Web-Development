@@ -411,3 +411,12 @@ grid-row: <row1>/<row2>;
     grid-row: 2/3;
 }
 ```
+
+### Felx vs Grid
+- Flexbox
+    - One dimensional
+
+- Grid
+    - Two dimensional
+
+![Flex vs Grid](https://www.bing.com/images/search?view=detailV2&ccid=SELCES4J&id=E92592BA30D435C6F35AFDDB1367D2D3268AF233&thid=OIP.SELCES4JfJhFTiTB3gR62QHaEs&mediaurl=https%3a%2f%2fcomingsoonwp.com%2fapp%2fwp-content%2fuploads%2f2018%2f10%2fflexbox-vs-grid.png&exph=558&expw=880&q=flexbox+vs+grid&simid=608053514333727520&FORM=IRPRST&ck=30D7477EF5F839D428A3F02221FAAD60&selectedIndex=0)
