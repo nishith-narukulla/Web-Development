@@ -230,4 +230,9 @@ as href attribute-->
 ```html
 <link rel="stylesheet" href="style.css">
 ```
-###
+### Adding icon to the tab
+```html
+<head>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+```
