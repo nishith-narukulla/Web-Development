@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+/* showcase */
+.showcase::after {
+    content: "";
+    height: 100vh;
+    width: 100%;
+    background: url(images/showcase.jpg) no-repeat center center/cover;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+
+.showcase:hover::after {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.showcase .content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    height: 350px;
+    width: 300px;
+    margin-top: 105px;
+    margin-left: -145px;
+    text-align: center;
+    transition: all 1000ms;
+}
+
+.showcase .content h1 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+
+.showcase .content p {
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.showcase:hover .content {
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
+.showcase .content:hover {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.showcase .content img {
+    height: 150px;
+    width: 150px;
+}
+
+/* container --> Cards, About */
+.container {
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+/* cards */
+.cards .cards-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.cards-3 img {
+    height: 70px;
+}
+
+/* About */
+.about .about-card {
+    background: #f4f4f4;
+    color: #333;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-align: start;
+}
+
+.about-card .content h3 {
+    margin-bottom: 1rem;
+}
+
+.about-card img {
+    height: 150px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Media Queries */
+
+/* small screen potrait mode */
+@media(max-width:560px) {
+    .showcase::after {
+        height: 50vh;
+    }
+
+    .showcase:hover::after {
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+    }
+
+    .showcase .content {
+        top: 5%;
+        margin-top: 5px;
+    }
+
+    .showcase .content p {
+        display: none;
+    }
+
+    .cards .cards-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .about .about-card {
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+
+    .about-card .content h3 {
+        text-align: center;
+    }
+
+    footer {
+        padding: 1.5rem;
+    }
+}
+
+/* Landscape mode */
+@media(max-height: 500px) {
+
+    .showcase .content h1,
+    .showcase .content p {
+        display: none;
+    }
+
+    .showcase .content {
+        top: 0;
+    }
+}
