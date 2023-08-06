@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    background: #eee;
+    height: auto;
+    /* overflow: hidden; */
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    /* box-shadow: 10px 0px 40px rgba(0, 0, 0, .5),
+        -30px 0px 40px rgba(0, 0, 0, .5); */
+}
+
+/* Showcase */
+#showcase {
+    background: #fff;
+}
+
+#showcase-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 40vw;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+#showcase-text h2 {
+    color: #888;
+}
+
+#showcase-img {
+    background: url(images/showcase.jpeg) no-repeat center center/cover;
+    height: 50vh;
+    flex: 0 1 60vw;
+}
+
+/* button */
+.btn {
+    text-decoration: none;
+    color: #333;
+    border: 1px #ccc solid;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    transition: background 500ms ease;
+}
+
+.btn:hover {
+    background: rgb(136, 136, 136, 0.5);
+}
+
+#top {
+    display: none;
+}
+
+/* #top {
+    position: fixed;
+    bottom: 5%;
+    text-decoration: none;
+}
+
+#top .btn {
+    border: black solid 1px;
+    background: rgba(204, 204, 204, 0.5);
+} */
+
+/* header */
+#header {
+    padding: 1rem;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+#header h2 {
+    border-right: 1px dotted #fff;
+    border-left: 1px dotted #fff;
+    display: inline-block;
+    padding: 0 1rem;
+}
+
+#images .separator {
+    margin: 2rem 0;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, .5),
+        -30px 0px 40px rgba(0, 0, 0, .5);
+}
+
+/* captions */
+.caption {
+    background: #eee;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+/* footer */
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #333;
+}
+
+footer h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+/* media Query for bigger screens*/
+@media(min-width: 500px) {
+    #showcase {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    #shocase-text {
+        height: 100vh;
+    }
+
+    #showcase-img {
+        height: 100vh;
+    }
+}
