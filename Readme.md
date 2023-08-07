@@ -39,3 +39,10 @@
 ### Project 6
 #### A simple landing page
 - full width landing img on any screen
+
+### Project 7
+#### Health Dashboard
+- grid system
+- resizing grid item widths
+- fixed image position
+- nice hover effect
