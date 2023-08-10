@@ -420,3 +420,87 @@ grid-row: <row1>/<row2>;
     - Two dimensional
 
 ![Flex vs Grid](https://www.bing.com/images/search?view=detailV2&ccid=SELCES4J&id=E92592BA30D435C6F35AFDDB1367D2D3268AF233&thid=OIP.SELCES4JfJhFTiTB3gR62QHaEs&mediaurl=https%3a%2f%2fcomingsoonwp.com%2fapp%2fwp-content%2fuploads%2f2018%2f10%2fflexbox-vs-grid.png&exph=558&expw=880&q=flexbox+vs+grid&simid=608053514333727520&FORM=IRPRST&ck=30D7477EF5F839D428A3F02221FAAD60&selectedIndex=0)
+
+### css Variables
+
+#### defining vars for the root elements
+- root variables
+- these can be used anywhere
+- syntax:
+```css
+:root{
+    --main-bg-color: black;
+    --primary-text-color: white;
+}
+```
+
+- usage:
+```css
+body{
+    background: var(--main-bg-color);
+    color: var(--primary-text-color);
+}
+```
+
+#### defining variables for a particular class
+- class variables
+- these can be used only within and its subclasses.
+- syntax:
+```css
+.container{
+    --container-bg-color: #333;
+    --container-text-color: #fff;
+    --container-border-color: #000;
+    --container-h1-color: blue;
+}
+```
+
+- usage:
+```css
+.container{
+    background: var(--container-bg-color);
+    color: var(--container-text-color);
+    border: 1ps solid var(--container-border-color);
+}
+
+/* this will apply only for
+h1 in the container class
+other h1s will not be effected
+ */
+h1{
+    color: var(--container-h1-color);
+}
+```
+
+#### variable overriding
+- we can override variables for particular elements
+```css
+.container{
+    --container-bg-color: #333;
+    --container-text-color: black;
+    --container-border-color: #000;
+}
+
+/* text color is black for every element */
+.container{
+    background: var(--container-bg-color);
+    color: var(--container-text-color);
+    border: 1ps solid var(--container-border-color);
+}
+
+/* text color for para elements
+is now blue
+and this will only apply for paras */
+.container p {
+    --container-text-color: blue;
+    color: var(--container-text-color);
+}
+``` 
+
+#### fallbacking variables
+- if variable dosn't exist we can set a default value
+```css
+.containre{
+    color: var(main-txt-color, black);
+}
+```

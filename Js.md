@@ -55,4 +55,29 @@ item.addEventListener('click', toggleClass);
 doucument.querySelector('.sample-class').addEventListener('click', () => document.querySelector('.sample-class').classList.toggle('sample-class2'));
 ```
 
-###
+### accessing css varaibles
+
+#### getting the values
+```js
+// query the class
+// get styles of the class
+// get the specific property
+const container = document.querySelector('.container');
+
+const containerStyles = getComputedStyles(container);
+// this gives all the properties of container class
+console.log(containerStyels);
+
+const containerTextColor = containerStyles.getPropertyValue('--container-text-color');
+// this gives a specific property value
+console.log('containerTextColor');
+```
+
+#### updating the variables
+```js
+// get the element we want to update
+// set property to new from old
+
+const containerHeader = document.querySelector('#main-header');
+containerHeader.style.setProperty('--header-background-color', 'blue');
+```
