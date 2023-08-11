@@ -46,3 +46,11 @@
 - resizing grid item widths
 - fixed image position
 - nice hover effect
+
+### project 8
+#### Full screnn video landing page
+- video as a background
+- responsive video fit
+- dark effect overlay for video
+- palceholder image until the video is loaded
+- social
