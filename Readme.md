@@ -54,3 +54,9 @@
 - dark effect overlay for video
 - palceholder image until the video is loaded
 - social
+
+### project 9
+#### A simple parallax website
+- image landing
+- fixed image attachment
+- light & dark backgrounds
