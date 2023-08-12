@@ -60,3 +60,8 @@
 - image landing
 - fixed image attachment
 - light & dark backgrounds
+
+### Project 10
+#### Simple CSS Loaders
+- four css loaders
+- timeout effect with JavaScript

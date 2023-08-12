@@ -1,0 +1,30 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader div {
+    height: 1rem;
+    width: 1rem;
+    background: red;
+    border-radius: 50%;
+    margin: 0.5rem;
+    animation: bounce 0.6s infinite alternate;
+}
+
+.loader div:nth-child(2) {
+    background: yellow;
+    animation-delay: 0.2s;
+}
+
+.loader div:nth-child(3) {
+    background: green;
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    to {
+        transform: translateY(-1rem);
+    }
+}
