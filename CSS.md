@@ -504,3 +504,13 @@ and this will only apply for paras */
     color: var(main-txt-color, black);
 }
 ```
+
+### CSS Properties
+```css
+/* hides scrollbar */
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+
+```
