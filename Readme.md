@@ -71,3 +71,12 @@
 - responsive contact form for 3 screen sizes
 - mobile first
 - different animation properties
+
+### Project 12
+#### Landing page with Smooth Scrolling
+- **Option:1** Pure Css
+    - scroll-behavior
+    - scroll-snap-type
+    - scroll-snap-align
+- **Option:2** Using JQuery
+- **Option:3** Smooth Scroll script
