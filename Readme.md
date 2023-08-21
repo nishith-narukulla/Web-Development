@@ -80,3 +80,16 @@
     - scroll-snap-align
 - **Option:2** Using JQuery
 - **Option:3** Smooth Scroll script
+
+### Project 13
+#### Interactive Form UI
+- input styling
+- input validation using js
+- displaying qsns as the user clicks next & prev
+- triggering event when user clicks Enter
+- changing image source using css
+- motion effect when the input is invalid
+- progress bar to show the progress of the form
+- Thanks message with the name entered by  the user along with fade in effect
+- adding new elements using Js DOM
+- styling elements in Js
