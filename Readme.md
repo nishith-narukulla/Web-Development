@@ -93,3 +93,15 @@
 - Thanks message with the name entered by  the user along with fade in effect
 - adding new elements using Js DOM
 - styling elements in Js
+
+### Project 14
+#### Full width Image slider
+- image captions transition
+- responsive for large/medium/small screens
+- two seperate functionalities
+- **auto slide**
+- images continously slides after 5sec
+- click continues from current auto sliding
+- buttons aleays unhided
+- **non-auto slide**
+- prev & next buttons hide/unhide based on next slides
