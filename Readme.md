@@ -105,3 +105,9 @@
 - buttons aleays unhided
 - **non-auto slide**
 - prev & next buttons hide/unhide based on next slides
+
+### Project 15
+#### Split Landing Page
+- 2D responsive
+- hover effect
+- background overlays
