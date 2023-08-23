@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nishith Narukulla">
+    <meta name="description" content="BoomBam watch landing page">
+    <link rel="stylesheet" href="simple-lightbox.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>BoomBam | Home</title>
+</head>
+
+<body id="home">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">BoomBam!</h1>
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav> <!--end .navbar-->
+
+    <section id="showcase">
+        <div class="container">
+            <div>
+                <h1>Lets you Wear Time</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quisquam totam esse. Debitis
+                    voluptatem soluta fugiat dolor ad expedita adipisci corrupti quibusdam, nisi doloremque pariatur
+                    eligendi eos sapiente iure velit.
+                </p>
+                <a href="" class="btn">Read more</a>
+            </div>
+            <img src="images/showcase.jpg" alt="">
+        </div>
+    </section><!-- end showcase-->
+
+    <section class="section-1">
+        <div class="overlay">
+            <div class="section-1-inner">
+                <h2>The way we spend our time defines who we are.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis omnis sapiente harum minima
+                    adipisci totam possimus suscipit molestias
+                </p>
+            </div>
+        </div>
+    </section><!--end .section-1-->
+
+    <section id="about" class="section-2">
+        <div class="gallery">
+            <a href="images/img1.jpg" target="_blank" class="big">
+                <img src="images/img1.jpg" alt="">
+            </a>
+            <a href="images/img2.jpg" target="_blank" class="big">
+                <img src="images/img2.jpg" alt="">
+            </a>
+            <a href="images/img3.jpg" target="_blank" class="big">
+                <img src="images/img3.jpg" alt="">
+            </a>
+            <a href="images/img4.jpg" target="_blank" class="big">
+                <img src="images/img4.jpg" alt="">
+            </a>
+            <a href="images/img5.jpg" target="_blank" class="big">
+                <img src="images/img5.jpg" alt="">
+            </a>
+            <a href="images/img6.jpg" target="_blank" class="big">
+                <img src="images/img6.jpg" alt="">
+            </a>
+        </div>
+    </section><!--end gallery section-->
+
+    <footer class="section-footer">
+        <div class="container">
+            <div>
+                <h2>Social</h2>
+                <a href="">
+                    <img src="images/fb.png" alt="facebook" class="icon">
+                </a>
+                <a href="">
+                    <img src="images/linkedIn.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="">
+                    <img src="images/twitter.jpeg" alt="Twitter" class="icon">
+                </a>
+            </div>
+
+            <div>
+                <h3>Company Info</h3>
+                <ul>
+                    <li><a href="">All Products</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Services</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Featured</h3>
+                <ul>
+                    <li><a href="">Lorem, ipsum dolor.</a></li>
+                    <li><a href="">Lorem, ipsum dolor.</a></li>
+                    <li><a href="">Lorem, ipsum dolor.</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Subscribe</h3>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <form name="email-form" method="POST" data-netlify="true">
+                    <div class="email-form">
+                        <span class="form-control-wrap">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Email"
+                                size="40">
+                        </span>
+                        <button type="submit" class="form-control submit">></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script src="simple-lightbox.min.js"></script>
+    <script>
+        (function () {
+            var $gallery = new SimpleLightbox('.gallery a', {});
+        })();
+    </script>
+
+</body>
+
+</html>

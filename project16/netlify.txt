@@ -1,0 +1,10 @@
+netlify CLI commands
+
+Installation ###################
+sudo npm i -g netlify-cli
+
+Initialize netflify in the root directory of Project ############
+netlify init
+
+Deploy ##########
+netlify deploy --prod

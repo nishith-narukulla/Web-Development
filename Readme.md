@@ -111,3 +111,13 @@
 - 2D responsive
 - hover effect
 - background overlays
+
+### Project 16
+#### Product Landing page(Watch)
+- simple Navbar
+- grid layouts
+- showcase
+- image gallery alligned with grid system
+- lightbox implementation using simplelightbox library
+- email submission
+- deployment using netlify
