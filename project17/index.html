@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nishith Narukulla">
+    <meta name="description" content="Nishith Narukulla Portfolio">
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="" id="theme-style">
+    <title>Nishit Narukulla</title>
+</head>
+
+<body>
+
+    <section class="header">
+        <div class="container">
+            <div class="greeting">
+                <h1>Hi I'm Nishith Narukulla</h1>
+            </div>
+
+            <div class="intro">
+                <div class="nav">
+                    <div class="nav-left">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <ul id="nav-right">
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div><!--end of .nav-->
+
+                <div class="left-col">
+                    <img id="profile-img" src="images/profile.png" alt="profile image">
+                    <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
+                    <div id="theme-selector">
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
+                    </div>
+                    <p id="theme-note">*Theme settings will be saved for <br>your next visit</p>
+                </div><!--end of .left-col-->
+
+                <div class="right-col">
+                    <div class="preview-shadow">
+                        <div id="preview">
+                            <div id="corner-tl" class="corner-dot"></div>
+                            <div id="corner-tr" class="corner-dot"></div>
+                            <h3>What I Do</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, dolore. </p>
+                            <div id="corner-br" class="corner-dot"></div>
+                            <div id="corner-bl" class="corner-dot"></div>
+                        </div>
+                    </div>
+                </div><!--end of .right-col-->
+
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content">
+                    <h4>About Me</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro id incidunt nisi quos
+                        officiis quibusdam vel? Voluptatum, excepturi officiis!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis porro id incidunt nisi quos
+                        officiis quibusdam vel? Voluptatum, excepturi officiis!</p>
+                    <hr>
+                    <h4>TOP EXPERTISE</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas blanditiis nisi ad quasi quidem
+                        ex eius quis minima quo consequatur.</p>
+                    <div id="skills">
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                            <li>Skill 4</li>
+                            <li>Skill 5</li>
+                        </ul>
+
+                        <ul>
+                            <li>Skill 1</li>
+                            <li>Skill 2</li>
+                            <li>Skill 3</li>
+                            <li>Skill 4</li>
+                            <li>Skill 5</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social">
+                    <img id="social-img" src="images/social.jpeg" alt="">
+                    <h3>Find me on Youtube & twitter</h3>
+                    <a href="" target="_blank">Youtube: @myYoutube</a><br>
+                    <a href="" target="_blank">twitter: @myTwitter</a>
+                </div>
+            </div>
+        </div>
+    </section><!-- end of .about-->
+
+    <section class="portfolio">
+        <div class="container">
+            <h4 style="text-align: center;">Some of my Projects</h4>
+            <div class="cards-wrapper">
+                <div class="card">
+                    <img src="images/webdesign.png" alt="" class="thumbnail">
+                    <div class="card-content">
+                        <h6 class="card-title">Project Title</h6>
+                        <p class="card-description">Project description: Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolorem, sed!
+                        </p>
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/webdesign.png" alt="" class="thumbnail">
+                    <div class="card-content">
+                        <h6 class="card-title">Project Title</h6>
+                        <p class="card-description">Project description: Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolorem, sed!
+                        </p>
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/webdesign.png" alt="" class="thumbnail">
+                    <div class="card-content">
+                        <h6 class="card-title">Project Title</h6>
+                        <p class="card-description">Project description: Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Dolorem, sed!
+                        </p>
+                        <a href="">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--end of .portfolio-->
+
+    <section class="contact">
+        <div class="container">
+            <h4 style="text-align: center;">Get in Touch</h4>
+            <form action="POST" id="contact-form">
+                <label>Name</label>
+                <input type="text" name="name" class="input-field">
+
+                <label>Subject</label>
+                <input type="text" name="subject" class="input-field">
+
+                <label>Email</label>
+                <input type="email" name="email" class="input-field">
+
+                <label>Message</label>
+                <textarea name="message" class="input-field"></textarea>
+
+                <input type="submit" value="Send" id="submit-btn">
+            </form>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

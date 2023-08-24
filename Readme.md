@@ -121,3 +121,13 @@
 - lightbox implementation using simplelightbox library
 - email submission
 - deployment using netlify
+
+### Project 17
+#### Portfolio website
+- responsive
+- added natural response to grids without media queries
+- four color themes
+- theme settings will be saved in localStorage so the settings will not change when the browser is closed or refreshed
+- changing the css file source based on theme setting
+- safari browser theme
+- nice contact form 
