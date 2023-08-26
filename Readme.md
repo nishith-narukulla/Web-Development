@@ -138,3 +138,8 @@
 - changing properties based on browser support
 - custom properties
 - background for cards gradient colors
+
+### Project 19
+#### Video Landing page 2
+- hamburger menu
+- video overlay with blend effect

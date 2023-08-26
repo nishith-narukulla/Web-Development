@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+}
+
+.icon {
+    width: 40px;
+}
+
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 40px 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.logo {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    height: 30px;
+    width: 30px;
+    background: url(media/open_menu.png) no-repeat center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url(media/close_menu.png) no-repeat center center/cover;
+    background-size: 25px;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.content h2 {
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.content h3 {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    mix-blend-mode: overlay;
+}
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social a {
+    padding: 0 5px;
+    transform: scale(.5);
+    transition: 0.3s ease-in-out;
+}
+
+.social a:hover,
+a:focus {
+    transform: scale(1) translateY(-15px);
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #111;
+    font-size: 24px;
+}
+
+.menu ul a:hover {
+    color: #03a9f4;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 40px;
+    }
+
+    .content h2 {
+        font-size: 3em;
+    }
+
+    .content h3 {
+        font-size: 1.5em;
+    }
+}
