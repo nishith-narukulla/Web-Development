@@ -296,6 +296,65 @@ grid-column: <column1>/<column2>;
 grid-row: <row1>/<row2>;
 /* position the element from column1 to column2 and row1 to row2 */
 ``` 
+#### Grid Template Areas
+- defines the layout of a grid area by referencing items within a grid(grid-area)
+'''[            navigation         ]
+
+   [ left-column       right-column]'''
+
+- before using the grid-template-area give them a name in their classes(not parent)
+- and use them in parent grid class
+
+```html
+<div class="wrapper">
+    <div class="nav">Navigation</div>
+    <div class="left-col">Left Column</div>
+    <div class="right-col">Right Column</div>
+    <div class="nav1">Navigation1</div>
+    <div class="left-col1">Left Column1</div>
+    <div class="right-col1">Right Column1</div>
+</div>
+```
+
+```css
+.nav {
+    background: skyblue;
+    grid-area: navigation;
+}
+
+.left-col {
+    background: #333;
+    grid-area: left-column;
+}
+
+.right-col {
+    background: lightgreen;
+    grid-area: right-column;
+}
+
+.nav1 {
+    background: skyblue;
+    grid-area: navigation1;
+}
+
+.left-col1 {
+    background: #333;
+    grid-area: left-column1;
+}
+
+.right-col1 {
+    background: lightgreen;
+    grid-area: right-column1;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3em 30em 3em 30em;
+    gap: 10px;
+    grid-template-areas: 'navigation navigation'
+}
+```
 #### code
 ```html
 <body>
