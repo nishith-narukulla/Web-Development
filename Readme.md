@@ -131,3 +131,10 @@
 - changing the css file source based on theme setting
 - safari browser theme
 - nice contact form 
+
+### Project 18
+#### Shoe Landing Page
+- natural responsiveness to grid layout
+- changing properties based on browser support
+- custom properties
+- background for cards gradient colors
