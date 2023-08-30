@@ -1,0 +1,14 @@
+- HTML
+- Css
+- JavaScript
+- BootStrap
+- RellaxJs
+- Smooth Scroll Script(github)
+- AOS library(AAnimation On Scroll)
+- scrollreveal
+- skeleton CSS
+- materialize CSS (pretty much good)
+- simplelightbox
+- netlify (free hosting)
+- Hostinger, Immortal(paid hosting)
+- tailwind css
