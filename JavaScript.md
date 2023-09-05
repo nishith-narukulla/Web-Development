@@ -257,3 +257,80 @@ x = 5 + null // 5 'number'
 x = 5 + true // 6 'number'
 x = 5 + false // 5 'number'
 ```
+
+## Working with Strings
+### Cocatenation
+```js
+let name = 'Nishith'
+let age = 21
+
+const str = 'hello, my name is ' + name + ' and i am ' + age + ' years old.'
+
+// Using Template Literals
+const str2 = `Hi my name is ${name} and I am ${age} years old`
+console.log(str2)
+```
+
+### Properties and Methods
+```js
+let str = 'John Doe'
+// index:  01234567
+// index:  87654321 --> negative
+
+// creating String Object
+const s = new String('String Object')
+console.log(s) // String {'String Object'}
+console.log(s.valueOf()) // getting true primitive value String Object
+
+// length function
+console.log(str.length) // 8
+
+// Indexing
+console.log(str[0]) // J
+console.log(str.charAt(0)) // J
+
+// listing all the methods using prototype
+console.log(str.__proto__)
+
+// Case of String
+console.log(str.toUpperCase())
+console.log(str.toLowerCase())
+
+// getting first occurence of char
+console.log(str.indexOf('D')) // 5
+
+// getting lastOccurence of char
+console.log(str.lastIndexOf('o')) // 6
+
+// getting subStrings
+console.log(str.substring(3)) // 3 to end => n Doe
+console.log(str.substring()) // start to end => John Doe
+console.log(str.substring(1, 6)) // 1 to 6(excluding) => ohn D
+
+// String slicing
+console.log(str.slice(4)) // 4 to end => _Doe
+console.log(str.slice()) // start to end => John Doe
+console.log(str.slice(1, 7)) // 1 to 7(excluding) => ohn Do
+console.log(str.slice(-1)) // first char from last => e
+console.log(str.slice(-8, -4)) // -8 to -4 => John
+
+// trimming
+str.trim()
+str.trimEnd()
+str.trimStart()
+
+// replacing characters/words
+console.log(str.replace('Doe', 'Smith'))
+
+// checking for availability of characters
+console.log(str.includes('D')) // true
+console.log(str.includes('Smith')) // false
+
+// Splitting String
+// @returns Array
+let arr = str.split(' ') // splits at space
+console.log(arr) // ['John', 'Doe']
+
+arr = str.split('') // splits at every character
+console.log(arr) // ['J', 'o', 'h', 'n', ' ', 'D', 'o', 'e']
+```
