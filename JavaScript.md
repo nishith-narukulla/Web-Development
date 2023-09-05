@@ -213,7 +213,7 @@ console.log(num, typeof num) // NaN 'number'
 // performing sqrt on -ve Numbers
 console.log(Math.sqrt(-1)) // NaN
 
-// arithmetic operations on Strings (excluding `+`)
+// arithmetic operations on non-numeric Strings (excluding `+`)
 console.log('hello' - 1) // NaN
 
 // Others
@@ -245,4 +245,15 @@ console.log(y) // true
 
 z = 2 === '2'
 console.log(z) // false
+```
+
+## Type Coercion(implicit type conversion)
+```js
+let x
+
+x = 5 + '5' // 55 String
+x = 5 * '5' // 25 Number
+x = 5 + null // 5 'number'
+x = 5 + true // 6 'number'
+x = 5 + false // 5 'number'
 ```
