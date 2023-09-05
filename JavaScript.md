@@ -372,3 +372,48 @@ console.log(Math.random()) // random b/w 0 to 1
 console.log(Math.round(3.5)) // 4
 // sin, cos, tan, sinh, log2, log10 etc..,
 ```
+
+## Date & Time
+```js
+let d
+
+d = new Date() // Tue Sep 05 2023 17:01:24 GMT+0530 (India Standard Time)
+
+// d = typeof d => object
+
+d = d.toString()
+
+// Set a custom date
+d = new Date(2023, 8, 5) // month index start from 0
+
+d = new Date('2023-09-05T12:30:00') // Tue Sep 05 2023 12:30:00 GMT+0530 (India Standard Time)
+
+d = new Date('2023/09/05 12:30:00') // Tue Sep 05 2023 12:30:00 GMT+0530 (India Standard Time)
+
+d = new Date('2023-09-05') // Tue Sep 05 2023 05:30:00 GMT+0530 (India Standard Time)
+
+// Getting individual values
+d = new Date()
+let x
+x = d.getFullYear() // 2023
+x = d.getDate() // 5
+x = d.getMonth() // index of the month
+x = d.getTime()
+x = d.getDay() // order of the day {mon:1 ...}
+// getHours, getMinutes, getSeconds, getMilliSeconds
+
+x = d.toLocaleString('default', { month: 'long' }) // September
+x = d.toLocaleString('default', { month: 'short' }) // Sept
+
+x = d.toLocaleString('default', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hourCycle: 'h24',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+}) // Tuesday, 5 September, 2023 at 17:42:22
+console.log(x)
+```
