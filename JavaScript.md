@@ -259,7 +259,7 @@ x = 5 + false // 5 'number'
 ```
 
 ## Working with Strings
-### Cocatenation
+### Concatenation
 ```js
 let name = 'Nishith'
 let age = 21
@@ -333,4 +333,42 @@ console.log(arr) // ['John', 'Doe']
 
 arr = str.split('') // splits at every character
 console.log(arr) // ['J', 'o', 'h', 'n', ' ', 'D', 'o', 'e']
+```
+
+## Working with Numbers
+```js
+// Creating Number Object
+let num = Number(5)
+console.log(num)
+
+// Rounding up decimals
+// @returns String
+let num2 = num.toFixed(2) // defines number of decimal digits
+console.log(num2, typeof num2) // 5.00 string
+
+let num3 = num.toPrecision(2) // defines total number of digits
+console.log(num3, typeof num3) // 5.0 string
+```
+
+### Math Object Properties
+```js
+console.log(Math)
+
+// Some Constatnts
+// PI, E, LN10, LN2, SQRT2
+console.log(Math.PI) // 3.141592653589793
+
+// Methods
+console.log(Math.abs(-10)) // 10
+console.log(Math.cbrt(27)) // 3
+console.log(Math.sqrt(16)) // 4
+console.log(Math.ceil(2.45)) // 3
+console.log(Math.floor(2.45)) // 2
+console.log(Math.exp(1)) // e**1 => 2.71
+console.log(Math.max(1, 2, 3, 4, 5)) // 5
+console.log(Math.min(10, 20, 34, 24, 65, 78)) // 10
+console.log(Math.pow(2, 3)) // 2 **3 => 8
+console.log(Math.random()) // random b/w 0 to 1
+console.log(Math.round(3.5)) // 4
+// sin, cos, tan, sinh, log2, log10 etc..,
 ```
