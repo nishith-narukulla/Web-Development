@@ -150,3 +150,73 @@ newStudent.id = 'abc'
 // modifying one will effect other
 console.log(student, newStudent)
 ```
+
+## Type Conversion
+### String to Number
+```js
+let num = '100'
+console.log(num, typeof num) // 100 string
+
+// using parseInt for real numbers
+// using parseFloat for decimals
+num = parseInt(num)
+
+// using unary operator
+num = +num
+
+// using Number constructor
+num = Number(num)
+
+console.log(num, typeof num) // 100 'number'
+```
+### Number to String
+```js
+let num = 100
+console.log(num, typeof num) // 100 'number'
+
+// using toString() method
+// why it works: js creates a wrapper for the variable to allow us to use methods on a primitive type
+num = num.toString()
+
+// using String constructor
+num = String(num)
+
+console.log(num, typeof num) // 100 string
+```
+
+### Number to Boolean
+```js
+let num1 = 0
+let num2 = 10
+console.log(num2, typeof num2) // 0 'number'
+
+// using Boolean constructor
+num1 = Boolean(num1)
+num2 = Boolean(num2)
+
+console.log(num1, typeof num1) // false 'boolean'
+console.log(num2, typeof num2) // true 'boolean'
+```
+
+## NaN (Not a Number)
+- NaN is a special type of number which is not actually a number
+- here are the five cases when you encounter NaN
+```js
+let num = '100e'
+console.log(num, typeof num)
+
+num = Number(num)
+
+// type casting non-numeric String to Number
+console.log(num, typeof num) // NaN 'number'
+
+// performing sqrt on -ve Numbers
+console.log(Math.sqrt(-1)) // NaN
+
+// arithmetic operations on Strings (excluding `+`)
+console.log('hello' - 1) // NaN
+
+// Others
+console.log(1 + NaN) // NaN
+console.log(undefined + undefined) // NaN
+```
