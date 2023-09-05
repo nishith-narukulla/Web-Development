@@ -52,3 +52,9 @@ Multiline
 comment
 */
 ```
+
+## Variables
+```js
+// ways to declare variables
+// var, let, const(cant be re-assigned)
+```
