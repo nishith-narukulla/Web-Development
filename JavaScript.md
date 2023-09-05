@@ -220,3 +220,29 @@ console.log('hello' - 1) // NaN
 console.log(1 + NaN) // NaN
 console.log(undefined + undefined) // NaN
 ```
+
+## Operators
+```js
+// 1. Arithmetic
+//  + - * / %
+
+//2. Exponents
+//  2 ** 3
+
+//3. Assignment
+// = += -= *= /= %=
+
+//4. Comparison
+//  == is not type specific
+// === is type specific
+// != is not type specific
+// !== is type specific
+x = 2 == 2
+console.log(x) // true
+
+y = 2 == '2'
+console.log(y) // true
+
+z = 2 === '2'
+console.log(z) // false
+```
