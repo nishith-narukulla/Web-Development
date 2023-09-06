@@ -776,3 +776,24 @@ double(2) // 4
 - block scope, function scope,global scope
 - any variable declared as let/const are restricted to use beyond their scope
 - but variables declared with var and in block level/global are free to use anywhere in the program
+
+## Execution Context
+- when you run any js code, a special environment is created to handle transformation & execution of code
+- it contains currently running code and everything aids in it
+- global execution context, function execution context
+
+- js is a single threaded language & synchronous
+
+### Execution Context Phases
+**Memory creation phase**
+- creates the global Object(window)
+- create the 'this' object and bind it to global object
+- set up memory heap for storing variables & function references
+- store functions & variables in global execution context and set to "undefined" 
+**Execution phase**
+- execute code line by line
+- create a new execution context for each function call
+
+### Call Stack
+- stack of functions to be executed
+- it manages execution contexts
