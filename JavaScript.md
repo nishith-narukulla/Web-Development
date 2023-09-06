@@ -624,3 +624,67 @@ let { name, age, isAdmin } = person // Nishith 21 true
 let { adress: { city, Country } } = person // Hyd IN
 console.log(city, Country)
 ```
+
+## JSON(JavaScript Object Notation)
+- it is a light-weight data interchange format
+- it stores data in a human redable form like API data
+**Format**
+```json
+[
+    {
+        "key1": 'value1',
+        "key2": 'value2'
+    }
+]
+```
+
+**Conversion from Js Object to JSON String**
+```js
+// Single Object
+const user = {
+    id: 1,
+    login: 'abc',
+    type: 'user',
+    isAdmin: false
+}
+
+// Convert to JSON fromat
+let str = JSON.stringify(user)
+// {"id":1,"login":"abc","type":"user","isAdmin":false}
+
+// convert back to JS Object
+const newObj = JSON.parse(str)
+// {id: 1, login: 'abc', type: 'user', isAdmin: false}
+
+// Multiple Objects
+const users = [
+    {
+        id: 1,
+        login: 'abc',
+        type: 'user',
+        isAdmin: false
+    },
+    {
+        id: 2,
+        login: 'abc',
+        type: 'user',
+        isAdmin: false
+    },
+    {
+        id: 3,
+        login: 'abc',
+        type: 'user',
+        isAdmin: false
+    },
+]
+
+// Convert to JSON fromat
+let str = JSON.stringify(users)
+// [{"id":1,"login":"abc","type":"user","isAdmin":false},{"id":2,"login":"abc","type":"user","isAdmin":false},{"id":3,"login":"abc","type":"user","isAdmin":false}]
+
+// convert back to JS Object
+const newObj = JSON.parse(str)
+// 0 : { id: 1, login: 'abc', type: 'user', isAdmin: false }
+// 1 : { id: 2, login: 'abc', type: 'user', isAdmin: false }
+// 2 : { id: 3, login: 'abc', type: 'user', isAdmin: false }
+```
