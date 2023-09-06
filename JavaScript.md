@@ -688,3 +688,91 @@ const newObj = JSON.parse(str)
 // 1 : { id: 2, login: 'abc', type: 'user', isAdmin: false }
 // 2 : { id: 3, login: 'abc', type: 'user', isAdmin: false }
 ```
+
+## Functions
+**Declaration & Invoking**
+```js
+function greet() {
+    console.log("Hello")
+}
+
+greet()
+```
+**Passing Arguments**
+```js
+function add(num1, num2) {
+    console.log(num1 + num2)
+}
+
+add(2, 3)
+```
+**Default Parameters**
+```js
+function register(user = 'Bot') {
+    console.log(`${user} is registered`)
+}
+
+register('Nishith') // Nishith is registered
+register() // Bot is registered
+```
+**Returning something**
+```js
+function add(num1, num2) {
+    return num1 + num2
+}
+
+console.log(add(2, 3))
+```
+**Function Declaration vs Expression**
+```js
+// Declaration
+function add(num1, num2) {
+    console.log(num1 + num2)
+}
+add(2, 3) // 5
+
+// Expression
+const multiply = function (num1, num2) {
+    console.log(num1 * num2)
+}
+multiply(2, 3) // 6
+```
+- we can call function declarations before declaration but not function expressions
+
+### Arrow Functions
+**Declaration & Usage**
+```js
+// Incase having multiple params & executions
+const add = (num1, num2) => {
+    const res = num1 + num2
+    console.log(res)
+}
+add(2, 3) // 5
+
+// Incase having single execution statement
+const add1 = (num1, num2) => console.log(num1 + num2)
+add1(2, 3) // 5
+
+// Incase having single param
+const double = num => console.log(num * 2)
+double(2) // 4
+```
+
+### Immediately Invoked Function Expressions
+- These functions run as soon as the page reloads
+```js
+// Declaration
+(function () {
+    console.log('Hello')
+})(); // Hello
+
+// Passing Arguments
+(function (name) {
+    console.log(`Hello ${name}`)
+})('Nishith'); // Hello Nishith
+```
+
+## Scope of Variables
+- block scope, function scope,global scope
+- any variable declared as let/const are restricted to use beyond their scope
+- but variables declared with var and in block level/global are free to use anywhere in the program
