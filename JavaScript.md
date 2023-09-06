@@ -417,3 +417,210 @@ x = d.toLocaleString('default', {
 }) // Tuesday, 5 September, 2023 at 17:42:22
 console.log(x)
 ```
+
+## Arrays & Objects
+
+### Arrays
+- An array in Js can store mixed datatypes
+**Declaration**
+```js
+// Array Literal
+const numbers = [1, 2, 3, 4, 5]
+
+// can be also mixed datatypes
+const mixed = [10, 'Ten', true, null]
+
+// Array constructor
+const numbers2 = new Array('5', '4', '3', '2', '1')
+```
+**Accessing Elements:** Asusual with indices
+```js
+// using index
+x = numbers[1] // 2
+
+mixed[1] = 20 // [10, 20, true, null]
+
+// Adding element at end
+mixed[4] = 'New'
+mixed[mixed.length] = 100 // [10, 'Ten', true, null, 'New', 100]
+```
+**Basic Array Methods**
+```js
+// length property
+x = mixed.length // 4
+
+// pushing element at end
+mixed.push('New')
+
+// Adding at begining
+mixed.unshift('New Begining')
+
+// popping last element
+x = mixed.pop()
+
+// popping first element
+x = mixed.shift()
+
+// Reversing array
+x = mixed.reverse() // [null, true, 'Ten', 10]
+
+// checking availability of an element
+x = mixed.includes(true) // true
+
+// finding index of an element
+//  returns -1 if not found
+x = mixed.indexOf('Ten') // 2
+mixed.push('Ten')
+x = mixed.indexOf('Ten') // First Occurence => 2
+x = mixed.lastIndexOf('Ten') // last Occurence => 4
+
+// Array slicing
+// doesn't effect original array
+x = mixed.slice() // [null, true, 'Ten', 10, 'Ten']
+x = mixed.slice(2) // ['Ten', 10, 'Ten']
+x = mixed.slice(2, 4) // ['Ten', 10]
+
+// Array splicing
+// effects original array
+x = mixed.splice(1, 4) // [true, 'Ten', 10, 'Ten']
+// @mixed => [null]
+
+// removing a element at pos using splice
+mixed.splice(2, 1) // [null, true, 10, 'Ten']
+
+// Array concatenation
+const num1 = [1, 2, 3]
+const num2 = [4, 5]
+x = num1.concat(num2) // [1, 2, 3, 4, 5]
+
+// Spread Operator
+x = [...num1, ...num2] // [1, 2, 3, 4, 5]
+x = [...num1, num2] // [1, 2, 3, [4, 5]]
+
+// Flatten Array
+x = [1, 2, 3, [4, 5], 6, 7, [8, 9, 10]]
+x = x.flat() // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+**Static Methods on Array Object**
+```js
+// checking for an array
+x = Array.isArray(mixed) // true
+
+// String to Array
+x = Array.from('Nishith') // ['N', 'i', 's', 'h', 'i', 't', 'h']
+
+// Forming array from variables
+const a = 1
+const b = 2
+const c = 3
+x = Array.of(a, b, c) // [1, 2, 3]
+```
+**Destructuring**
+```js
+const numbers = [1, 2, 3, 4, 5]
+
+let [first, second] = numbers
+console.log(first, second) // 1 2
+
+let [first, second, ...rest] = numbers
+console.log(first, second, rest) // 1 2 [3, 4, 5]
+```
+
+### Object Literals
+-A common data structure that holds key, value pairs
+**Declaration**
+```js
+// 1
+person = {
+    name: 'Nishith',
+    age: 21,
+    isAdmin: true,
+    hobbies: ['music', 'gaming'],
+    adress: {
+        city: 'Hyd',
+        State: 'TS',
+        Country: 'IN'
+    }
+}
+ // 2
+student = {
+    'first name': 'Nishith',
+    'last': 'Narukulla'
+}
+// 3
+const person2 = new Object()
+
+// 4
+const fname = 'Nishith'
+const lname = 'Narukulla'
+const age = 21
+// if key & pair naming is same then
+// we can declare like this
+person = {
+    fname,
+    lname,
+    age
+}
+// {fname: 'Nishith', lname: 'Narukulla', age: 21}
+```
+**Accessing Elements**
+```js
+// getting vlaues
+x = person.name // Nishith
+x = person['name'] // Nishith
+x = person.adress.city // Hyd
+x = person.hobbies[1] // gaming
+
+// updation
+person.isAdmin = false
+
+// Deletion
+delete person.isAdmin
+
+// Adding new pair
+person.isAdmin = true
+
+// we can add functions as well
+person.intro = function () {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old`)
+}
+
+person.intro() // Hello, my name is Nishith and I'm 21 years old
+```
+**Object Methods**
+```js
+obj1 = { a: 1, b: 2 }
+obj2 = { c: 3, d: 4 }
+let x
+
+x = { obj1, obj2 } // { {a: 1, b: 2}, {c: 3, d: 4}}
+
+// Spread operator
+x = { ...obj1, ...obj2 } // {a: 1, b: 2, c: 3, d: 4}
+x = Object.assign(obj1, obj2) // {a: 1, b: 2, c: 3, d: 4}
+
+// getting all keys
+// @returns array
+x = Object.keys(person) // ['name', 'age', 'isAdmin', 'hobbies', 'adress']
+
+// getting values
+x = Object.values(person)
+
+// length of the object
+//  == length of keys array
+x = Object.keys(person).length // 5
+
+// getting all Pairs as individual list
+x = Object.entries(person)
+
+// checking existence of property
+x = person.hasOwnProperty('name') // true
+x = person.hasOwnProperty('id') // false
+```
+**Destructuring**
+```js
+let x = person.age // 21
+let { name, age, isAdmin } = person // Nishith 21 true
+let { adress: { city, Country } } = person // Hyd IN
+console.log(city, Country)
+```
