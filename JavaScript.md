@@ -247,7 +247,19 @@ z = 2 === '2'
 console.log(z) // false
 
 // 5. Logical
-// &&, ||
+// && => returns first falsy value or last value
+// || => returns first truthy value or last value
+// ?? => returns the right side operand if left is null/undefined
+
+// 6. Logical Assignment
+// ||= assigns right side value if left is falsy => a ||= 10
+// &&= assigns right side value if left is truthy
+// ??= assigns right side value if left is  only null/undefined
+
+// 7. Ternary Operator
+// (condition) ? statement1 : statement2
+// age >= 18 ? clg('Major') : clg('Minor')
+// a = age>=18 ? 'Major' : 'Minor'
 ```
 
 ## Type Coercion(implicit type conversion)
@@ -853,4 +865,18 @@ switch (ch) {
     default:
         console.log('Default')
 }
+```
+
+## Truthy & Falsy values
+```js
+/*  Falsy Values
+-> false
+-> 0
+-> '' || ""
+-> null
+-> undefined
+-> NaN
+*/
+
+// Truthy values other than falsy
 ```
