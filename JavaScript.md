@@ -981,3 +981,49 @@ for (const key in person) {
     console.log(person[key])
 }
 ```
+
+## Higher Order Array methods
+### for each
+### filter()
+- it filters the array based on the condition and return an array
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const evenNums = numbers.filter(num => num % 2 == 0)
+console.log(evenNums) // [2, 4, 6, 8, 10]
+```
+### map()
+- it populate a new array with result based on the condition
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const evenNums = numbers.map(num => num % 2 == 0)
+console.log(evenNums) // [false, true, false, true, false, true, false, true, false, true]
+
+const map1 = numbers.map(num => num * 2)
+console.log(map1) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+const eightMultiples = numbers.map(num => num * 2).filter(num => num % 8 == 0)
+console.log(eightMultiples) // [8, 16]
+```
+### reduce()
+- this will reduce the entire array to a single value based on condition
+```js
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// this returns sum of all the elements
+// with initial sum given
+const sum1 = numbers.reduce((num1, num2) => num1 + num2, 0)
+console.log(sum1) // 55
+const sum2 = numbers.reduce((num1, num2) => num1 + num2, 10)
+console.log(sum2) // 65
+const sum3 = numbers.reduce((num1, num2) => num1 + num2, -5)
+console.log(sum3) // 50
+
+// using for each
+let sum = 0
+numbers.forEach(item => {
+    sum += item
+})
+console.log(sum)
+```
