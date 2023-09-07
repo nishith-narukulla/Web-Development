@@ -245,6 +245,9 @@ console.log(y) // true
 
 z = 2 === '2'
 console.log(z) // false
+
+// 5. Logical
+// &&, ||
 ```
 
 ## Type Coercion(implicit type conversion)
@@ -797,3 +800,57 @@ double(2) // 4
 ### Call Stack
 - stack of functions to be executed
 - it manages execution contexts
+
+## Logic & Control Flow
+### If statement
+```js
+if (true) {
+    console.log('This will execute')
+}
+
+if (false) {
+    console.log('This will not Execute')
+}
+```
+### if else
+```js
+const x = 10
+const y = '10'
+
+if (x == y) { console.log('True') } // True
+else { console.log('False') }
+
+if (x === y)  console.log('True') 
+else  console.log('False')  // False
+```
+### else if
+```js
+const d = new Date()
+const hour = d.getHours()
+
+if (hour < 12) {
+    console.log('Good Morning')
+}
+else if (hour < 18) {
+    console.log('Good Afternoon')
+}
+else {
+    console.log('Good Night')
+}
+```
+
+### Switch
+```js
+const ch = 1
+
+switch (ch) {
+    case 1:
+        console.log('One')
+        break
+    case 2:
+        console.log('Two')
+        break
+    default:
+        console.log('Default')
+}
+```
