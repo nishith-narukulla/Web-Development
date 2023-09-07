@@ -880,3 +880,104 @@ switch (ch) {
 
 // Truthy values other than falsy
 ```
+
+## Loops
+### for loop
+```js
+for(let i = 0; i<10; i++){
+    statements;
+}
+```
+
+### While & do-while
+```js
+let i = 0
+// While
+while (i <= 10) {
+    console.log(i)
+    i++
+}
+
+let j = 11
+// Do while
+do {
+    console.log(j)
+    j++
+} while (j <= 10)
+```
+
+### Looping through array
+```js
+const numbers = [1, 2, 3, 4, 5]
+
+// for loop
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i])
+}
+
+// while
+let j = 0
+while (j < numbers.length) {
+    console.log(numbers[j])
+    j++
+}
+
+// for each
+numbers.forEach(item => console.log(item))
+
+// for of
+for (const item of numbers) {
+    console.log(item)
+}
+
+// for in
+for (const index in numbers) {
+    console.log(numbers[index])
+}
+```
+
+### Looping through Strings
+```js
+const str = 'Nishith'
+
+// for loop
+for (let i = 0; i < str.length; i++) {
+    console.log(str[i])
+}
+
+// while
+let j = 0
+while (j < str.length) {
+    console.log(str[j])
+    j++
+}
+
+// for of
+for (const item of str) {
+    console.log(item)
+}
+
+// for in
+for (const index in str) {
+    console.log(str[index])
+}
+```
+
+### Looping through Objects
+```js
+const person = {
+    id: 1,
+    name: 'Nishith',
+    age: 21
+}
+
+// for loop
+for (let i = 0; i < Object.keys(person).length; i++) {
+    console.log(person[Object.keys(person)[i]])
+}
+
+// for in
+for (const key in person) {
+    console.log(person[key])
+}
+```
