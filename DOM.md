@@ -71,3 +71,66 @@ output = document.querySelectorAll('.sample-class')
 output = document.querySelector('.sample-class p') // <p>Hello from paragraph</p>
 output = document.querySelector('.sample-class h3') // <h3>Hello from h3</h3>
 ```
+
+### Traversing DOM Elements
+![DOM Traversal](https://github.com/nishith-narukulla/Web-Development/blob/mainline/images/DOM_traversal.png)
+
+```html
+<div class="parent">
+    <div class="child">Child 1</div>
+    <div class="child">Child 2</div>
+    <div class="child">Child 3</div>
+</div>
+```
+```js
+let output
+
+// GET CHILDRENS OF AN PARENT ELEMENT
+let parent = document.querySelector('.parent')
+
+// @return HTMLCollection
+let children = parent.children // [div.child, div.child, div.child]
+
+// HTMLCollection to Array
+let childrenArray = Array.from(children) // [div.child, div.child, div.child]
+
+// loop through childrens
+childrenArray.forEach((child, index) => {
+    console.log(child.innerHTML) // Child 1, Child 2, Child 3
+    console.log(child.className) // child
+
+    if (index == 1) {
+        child.style.color = 'blue' // sets 2nd child color to blue
+    }
+})
+
+// change content of childrens
+children[0].innerText = 'Children One'
+children[1].innerText = 'Children Two'
+children[2].innerText = 'Children Three'
+
+// we can target first & last children
+let firstChild = parent.firstElementChild // Children One
+let lastChild = parent.lastElementChild // Children Three
+
+// GET PARENT FROM CHILD ELEMENTS
+let child = document.querySelector('.child') // Child One
+let parent1 = child.parentElement
+
+// styling parent
+parent1.style.border = '1px solid #333'
+parent1.style.padding = '10px'
+parent1.style.borderRadius = '10px'
+
+// GET SIBLINGS OF AN ELEMENT
+let secondChild = document.querySelector('.child:nth-child(2)') // Child Two
+
+let prevSibling = secondChild.previousElementSibling // Child One
+let nextSibling = secondChild.nextElementSibling // Child Three
+
+let prevSiblingPrev = prevSibling.previousElementSibling // null
+let nextSiblingNext = nextSibling.nextElementSibling // null
+
+output = nextSibling
+console.log(output)
+```
