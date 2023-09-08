@@ -72,7 +72,7 @@ output = document.querySelector('.sample-class p') // <p>Hello from paragraph</p
 output = document.querySelector('.sample-class h3') // <h3>Hello from h3</h3>
 ```
 
-### Traversing DOM Elements
+## Traversing DOM Elements
 ![DOM Traversal](https://github.com/nishith-narukulla/Web-Development/blob/mainline/images/DOM_traversal.png)
 
 ```html
@@ -133,4 +133,36 @@ let nextSiblingNext = nextSibling.nextElementSibling // null
 
 output = nextSibling
 console.log(output)
+```
+
+## Traversing DOM All Nodes
+
+### DOM Node Types
+- Element
+- Attr
+- Text
+- Comment
+- document
+- DocumentType etc..,
+
+### DOM Node relations
+![DOM Node Relation](https://github.com/nishith-narukulla/Web-Development/blob/mainline/images/DOM_Node_traversal.png)
+
+```html
+<div class="parent">
+    <!-- This is Comment -->
+    <div class="child">Child 1</div>
+    <div class="child">Child 2</div>
+    <div class="child">Child 3</div>
+</div>
+```
+```js
+// GET CHILD NODES OF AN PARENT NODE
+let parentNode = document.querySelector('.parent')
+
+// list with all nodes
+// whitespaces & comments are also nodes
+let childNodes = parentNode.childNodes // [text, comment, text, div.child, text, div.child, text, div.child, text]
+
+let comment = childNodes[1].textContent // This is Comment
 ```
