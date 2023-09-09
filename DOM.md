@@ -300,3 +300,188 @@ element.style.borderRadius = '10px'
 
 */
 ```
+
+## Events
+
+### Using inline event listeners (not recommended)
+```html
+<button class="btn" onclick="clicked()">Click Me</button>
+```
+```js
+function clicked() {
+    alert('Button clicked')
+}
+```
+
+### JavaScript Event Listener
+```js
+const btn = document.querySelector('.btn')
+
+btn.onclick = function () {
+    alert('Clicked')
+}
+```
+
+### addEventListener()
+```js
+// using anonymous fuction
+btn.addEventListener('click', function () {
+    alert('clicked')
+})
+
+// adding a named function
+btn.addEventListener('click', clicked)
+
+function clicked() {
+    alert('clicked')
+}
+```
+
+### Automatically triggering an click event
+```js
+// triggers after specified time
+setTimeout(
+    () => {
+        btn.click()
+    },
+    5000
+)
+```
+
+### Mouse Events
+```js
+/*
+
+'click' => on mouse click
+'dblclick' => double click
+'contextmenu' => right click
+'mousedown' => mouse left key click & hold
+'mouseup' => mouse left key click,hold & release
+'wheel' => on mouse scroll
+'mouseover' => on mouse hover
+'mouseout' => on mouse out
+'dragstart' => on start dragging an element
+'drag' => keeps firing off until you release
+'dragend' => on releasing dragged item
+
+*/
+```
+
+### Event Object
+```js
+/*
+
+'target' => the element that triggered the event
+'currentTarget' => the element attached to the event listener
+'type' => type of event
+'timeStamp' => timing of the trigger
+'clientX', 'clientY' => position relative to the window
+'offsetX', 'offsetY' => position relative to the element
+'pageX', 'pageY' => position relative to the page
+'screenX', 'screenY' => position relative to the screen
+
+*/
+const btn = document.querySelector('.btn')
+
+function onClick(e) {
+    let output
+
+    output = e.target // <button class="btn">Click Me</button>
+    output = e.currentTarget // <button class="btn">Click Me</button>
+    output = e.type // click
+    output = e.timeStamp
+    output = e.clientX
+    output = e.clientY
+    output = e.offsetX
+
+    console.log(output)
+}
+
+btn.addEventListener('click', onClick)
+```
+
+### Keyboard Events
+```js
+/*
+ * keypress => on pressing
+ * keyup => on releasing
+ * keydown => on holding down
+ */
+
+/*
+ * e.key => returns pressed key
+ * e.keycode => returns keycode
+ * e.code => returns code of the key
+ * e.repeat => returns true if you hold any key
+ * e.shiftKey, e.ctrlKey, e.altKey => return true if these keys are pressed
+ */
+
+const btn = document.querySelector('.btn')
+
+btn.addEventListener('keyup', (e) => {
+    console.log(e.key)
+})
+```
+
+### Input Events
+```html
+<input type="text" id="input">
+    <select name="" id="dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select>
+<input type="checkbox" name="" id="checkbox">
+```
+```js
+const input = document.querySelector('#input')
+const dropDown = document.querySelector('#dropdown')
+const checkBox = document.querySelector('#checkbox')
+
+// for input fields, deropdowns
+function onInput(e) {
+    console.log(e.target.value)
+}
+
+// for checkboxes
+function onChecked(e) {
+    console.log(e.target.checked)
+}
+
+function onFocus(e) {
+    console.log('Focused')
+}
+
+function onBlur(e) {
+    console.log('Out of Focus')
+}
+
+// when input is entered
+input.addEventListener('input', onInput)
+dropDown.addEventListener('input', onInput)
+checkBox.addEventListener('input', onChecked)
+
+// on focus
+input.addEventListener('focus', onFocus)
+
+// on out of focus
+input.addEventListener('blur', onBlur)
+```
+
+### Event Bubbling
+- when an element is clicked the click event bubbles upto its root element even the element only was clicked
+- to prevent that bubbling further use
+```js
+e.stopPropagation()
+```
+
+### Page Load Events
+```js
+/*
+
+// window.onload 
+// window.addEventListener('load', ()=> do something) => waits for the entire page loading includes DOM, resources
+// window.addEventListener('DOMContentLoaded', ()=> do something) => waits until DOM is parsed
+
+*/
+```
