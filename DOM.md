@@ -287,3 +287,16 @@ element.classList.replace('old', 'new') => replaces old with new
 
 */
 ```
+
+## Working with styles
+```js
+/*
+
+element.style.<propertyName> = 'propertyValue'
+element.style.color = 'red'
+
+// use Camelcase for multi-word properties
+element.style.borderRadius = '10px'
+
+*/
+```
