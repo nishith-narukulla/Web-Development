@@ -269,3 +269,21 @@ firstChild.remove()
 // remove specific child of parent elmnt
 parent.removeChild(secondChild)
 ```
+
+## Adding/removing classes
+```js
+/*
+
+// className
+element.className => returns string with all classes
+element.className = 'new' => override existing with new
+
+// classList
+element.classList => returns list of classes
+element.classList.add('new') => adds new to the existing
+element.classList.remove('new') => removes class
+elelement.classList.toogle('new') => toggles the class
+element.classList.replace('old', 'new') => replaces old with new
+
+*/
+```
