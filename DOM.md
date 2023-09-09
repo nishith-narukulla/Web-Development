@@ -166,3 +166,106 @@ let childNodes = parentNode.childNodes // [text, comment, text, div.child, text,
 
 let comment = childNodes[1].textContent // This is Comment
 ```
+
+## Create, Append, Replace, Remove DOM Elements
+
+### Appending New element to end of an element
+```js
+// CREATE NEW ELEMENT
+const div = document.createElement('div')
+div.className = 'new-parent'
+output = document.body.children // [div.parent, script]
+
+// append it to the body node
+document.body.appendChild(div)
+output = document.body.children // [div.parent, script, div.new-parent]
+
+div.setAttribute('id', 'new-parent')
+
+// lets create an text Node and append to it
+const textNode = document.createTextNode('New Text')
+div.appendChild(textNode)
+output = div // <div class="new-parent" id="new-parent">New Text</div>
+```
+
+### Appending after/before an element
+```js
+const parent = document.querySelector('.parent')
+
+const div = document.createElement('div')
+const text = document.createTextNode('New Child')
+
+div.appendChild(text)
+
+// @positions: beforebegin, beforeend, afterbegin, afterend
+/*
+** beforebegin
+<div class="parent">
+** afterbegin
+    <div class="child">Child 1</div>
+**beforeend
+</div>
+** afterend
+*/
+
+// insertAdjacentElement --> Elements
+parent.insertAdjacentElement('afterend', div)
+
+// insertAdjacentText --> TextNodes
+parent.insertAdjacentText('beforebegin', 'New child')
+
+// insertAdjacentHTML --> HTML markup
+parent.insertAdjacentHTML('afterend', '<h2>New child</h2>')
+
+// insertBefore
+// applies on parent elmnt and place it before reference elmnt
+const refElement = document.querySelector('.child:nth-child(2)')
+
+parent.insertBefore(div, refElement)
+
+console.log(document.body.innerHTML)
+```
+
+### Replace Elements
+```js
+const parent = document.querySelector('.parent')
+const firstChild = document.querySelector('.child:first-child')
+const secondChild = document.querySelector('.child:nth-child(2)')
+const thirdChild = document.querySelector('.child:last-child')
+
+const newChild = document.createElement('div')
+newChild.className = 'new-child'
+const text = document.createTextNode('New Child')
+newChild.appendChild(text)
+
+// USING replaceWith()
+// element with element
+firstChild.replaceWith(newChild)
+
+// All children of a parent with element
+parent.replaceChildren(newChild)
+
+// specific children of parent with elmnt
+parent.replaceChild(newChild, thirdChild)
+
+// USING outerHTML()
+// replace entire element including tags & id/classes
+firstChild.outerHTML = newChild.outerHTML
+thirdChild.outerHTML = '<h3>New Child</h3>'
+
+// USING innerHTML()
+// replace only inner content excluding tag & id/class
+secondChild.innerHTML = 'New Child'
+thirdChild.innerHTML = newChild.innerHTML
+
+console.log(document.body.innerHTML)
+```
+
+### Removing Elements
+```js
+// remove specific elmnt
+firstChild.remove()
+
+// remove specific child of parent elmnt
+parent.removeChild(secondChild)
+```
