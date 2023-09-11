@@ -1027,3 +1027,55 @@ numbers.forEach(item => {
 })
 console.log(sum)
 ```
+
+## OOPs
+**Old Version**
+### Constructor functions
+```js
+// constructor functions
+function person() {
+    this.name = 'Nishith'
+    this.age = 21
+    this.admin = true
+}
+
+// instantiating object
+const person1 = new person()
+console.log(person1.name, person1.age) // Nishith 21
+```
+
+### passing arguments
+```js
+function person(name, age, isAdmin) {
+    this.name = name
+    this.age = age
+    this.admin = isAdmin
+}
+
+// creating object and passing arguments
+const person1 = new person('Nishith', 21, true)
+console.log(person1.name, person1.age) // Nishith 21
+```
+
+**New version**
+### Creating classes
+```js
+// creating class
+class person {
+    // constructor
+    constructor(fname, lname, age) {
+        this.fname = fname
+        this.lname = lname
+        this.age = age
+    }
+
+    // methods
+    getFullName() {
+        return `${this.fname} ${this.lname}`
+    }
+}
+
+// creating object
+const person1 = new person('Nishith', 'Narukulla', 21)
+console.log(person1.getFullName(), person1.age) // Nishith Narukulla 21
+```
