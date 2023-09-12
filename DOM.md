@@ -301,6 +301,35 @@ element.style.borderRadius = '10px'
 */
 ```
 
+## Accessing CSS variables & Styles
+```css
+:root {
+    --color: black;
+    --text-color: white;
+    --border: 2px solid #f4f4f4
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: var(--color);
+    color: var(--text-color);
+    padding: 20px;
+}
+```
+```js
+const container = document.querySelector('.container')
+
+const styles = getComputedStyle(container)
+// console.log(styles)
+
+// get value of a known variable
+console.log(styles.getPropertyValue('--color')) // black
+// getting other properties
+console.log(styles.getPropertyValue('color')) // rgb(255, 255, 255)
+console.log(styles.getPropertyValue('padding')) // 20px
+```
+
 ## Events
 
 ### Using inline event listeners (not recommended)
@@ -363,6 +392,8 @@ setTimeout(
 'dragstart' => on start dragging an element
 'drag' => keeps firing off until you release
 'dragend' => on releasing dragged item
+'cut'
+'paste'
 
 */
 ```
