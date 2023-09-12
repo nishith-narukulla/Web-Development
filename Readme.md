@@ -143,3 +143,19 @@
 #### Video Landing page 2
 - hamburger menu
 - video overlay with blend effect
+
+## JavaScipt Projects
+
+### Project 20
+#### Booklist UI
+- interactive
+- input fields validation
+- classes & methods
+- acessing user input value
+- storing array of objects in LocalStorage
+- adding books to UI & Storage
+- removing books from UI & Storage
+- popup messages when  a book is added & removed
+- automatic vanish of popup message after 3s
+- displays books as soon as the DOM content loads
+- dyanamic HTML elements creation

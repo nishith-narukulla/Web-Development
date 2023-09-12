@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: ccc;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+}
+
+span {
+    color: skyblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.input-label {
+    font-size: 1rem;
+}
+
+.input-field {
+    padding: 5px 10px;
+    width: 100%;
+    margin-bottom: 1rem;
+    outline: 0;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    padding: 5px 0px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: rgb(135, 206, 235);
+    color: #333;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #999;
+    padding: .5rem;
+}
+
+tr.data:nth-child(odd) {
+    background-color: #b8b8b8;
+}
+
+td.close-cell {
+    border: none;
+    background: #f4f4f4;
+}
+
+.close {
+    cursor: pointer;
+    color: white;
+    background-color: red;
+    padding: 0px 6px 2px 6px;
+}
+
+.message {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 10rem;
+    background-color: green;
+    color: white;
+    padding: 10px 50px;
+    text-align: center;
+    transform: translateY(-100%);
+    transition: all 2s ease-in-out;
+    animation: popup 1s ease-in-out;
+    animation-fill-mode: forwards;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@keyframes popup {
+    to {
+        transform: translateY(0);
+    }
+}
