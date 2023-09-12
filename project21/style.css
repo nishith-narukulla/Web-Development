@@ -1,0 +1,35 @@
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.centre {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.input {
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: 0;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+}
+
+.input::placeholder {
+    color: #d2cbcb;
+}
+
+.list-item {
+    padding: 10px 10px;
+    border-bottom: 1px solid #999;
+}

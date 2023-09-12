@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+    <title>Filter List</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="centre">My List</h1>
+        <input type="text" id="input" class="input" placeholder="search names">
+        <ul class="list">
+            <li class="list-item">Alex</li>
+            <li class="list-item">Alice</li>
+            <li class="list-item">Amy</li>
+            <li class="list-item">Andrew</li>
+            <li class="list-item">Angela</li>
+            <li class="list-item">Balley</li>
+            <li class="list-item">Brandon</li>
+            <li class="list-item">Blake</li>
+            <li class="list-item">Benjamin</li>
+            <li class="list-item">Courter</li>
+            <li class="list-item">Cop</li>
+            <li class="list-item">Coli</li>
+            <li class="list-item">Danny</li>
+            <li class="list-item">David</li>
+            <li class="list-item">Faruk</li>
+            <li class="list-item">Zaman</li>
+        </ul>
+    </div>
+    <script>
+        const input = document.querySelector('#input')
+
+
+            function filterNames(e) {
+                // get input value
+                const inputValue = e.target.value.toLowerCase()
+                // get items
+                const names = document.querySelectorAll('.list-item')
+
+                names.forEach(item => {
+                    const name = item.textContent
+                    if (name.toLowerCase().indexOf(inputValue) > -1) {
+                        item.style.display = ''
+                    } else {
+                        item.style.display = 'none'
+                    }
+                })
+
+            }
+
+            // EVENT
+            input.addEventListener('input', filterNames)
+    </script>
+</body>
+
+</html>
