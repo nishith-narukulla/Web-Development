@@ -159,3 +159,10 @@
 - automatic vanish of popup message after 3s
 - displays books as soon as the DOM content loads
 - dyanamic HTML elements creation
+
+### Project 21
+#### Weight Converter App
+- intractive
+- input validation
+- calculation based on selected units
+- selected unit in first selector is hidden in second seletor
