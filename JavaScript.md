@@ -1006,6 +1006,16 @@ console.log(map1) // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 const eightMultiples = numbers.map(num => num * 2).filter(num => num % 8 == 0)
 console.log(eightMultiples) // [8, 16]
 ```
+
+### sort()
+```js
+const arr = [3, 5, 21, 2, 1, 3, 57, 8, 6, 5, 4, 3]
+
+const ar = arr.sort((a, b) => {
+    return a > b ? 1 : -1
+})
+console.log(ar) // [1, 2, 3, 3, 3, 4, 5, 5, 6, 8, 21, 57]
+```
 ### reduce()
 - this will reduce the entire array to a single value based on condition
 ```js
