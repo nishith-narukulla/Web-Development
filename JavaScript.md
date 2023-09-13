@@ -1071,7 +1071,7 @@ console.log(person1.name, person1.age) // Nishith 21
 ### Creating classes
 ```js
 // creating class
-class person {
+class Person {
     // constructor
     constructor(fname, lname, age) {
         this.fname = fname
@@ -1086,6 +1086,44 @@ class person {
 }
 
 // creating object
-const person1 = new person('Nishith', 'Narukulla', 21)
+const person1 = new Person('Nishith', 'Narukulla', 21)
 console.log(person1.getFullName(), person1.age) // Nishith Narukulla 21
+```
+
+### Inheritence
+```js
+// Parent class
+class Animal {
+    constructor(name, type) {
+        this.name = name
+        this.type = type
+        this.sound = 'meow'
+    }
+
+    makeSound(type) {
+        console.log(`I ${this.sound}`)
+    }
+}
+
+// subclass
+class Dog extends Animal {
+    constructor(name, type, sound) {
+        super(name, type)
+        this.sound = sound
+    }
+
+    bark() {
+        console.log('Barking...')
+    }
+}
+
+// Instantiate Dog Object
+const dog1 = new Dog('jimmy', 'Dog', 'Bark')
+dog1.makeSound() // I Bark
+dog1.bark() // Barking...
+
+// Instantiate Animal Object
+const ani1 = new Animal('bob', 'cat')
+ani1.makeSound() // I meow
+ani1.bark() // error
 ```
