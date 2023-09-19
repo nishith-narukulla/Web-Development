@@ -1127,3 +1127,156 @@ const ani1 = new Animal('bob', 'cat')
 ani1.makeSound() // I meow
 ani1.bark() // error
 ```
+
+## AJAX
+
+### What is AJAX?
+- Asynchronous JavaScript & XML
+- set of web technologies
+- send & recieve data asynchronously
+- does not interfere with the current web page(reloading etc)
+- JSON has replaced most of the part
+
+### fetching Local Text
+```html
+<button id="btn">Get Text</button>
+<div id="text"></div>
+```
+```js
+// Init DOM elements
+const btn = document.querySelector('#btn')
+
+// FUNCTIONS
+function loadText() {
+    // XHR Object
+    var xhr = new XMLHttpRequest()
+
+    // OPEN -> type, url/file, async(boolean)
+    xhr.open('GET', 'sample.txt', true)
+
+    // ONLOAD
+    xhr.onload = function () {
+        if (this.status === 200) {
+            document.getElementById('text').textContent = this.responseText
+        }
+    }
+
+    // Sends Request
+    xhr.send()
+}
+
+// EVENTS
+btn.addEventListener('click', loadText)
+```
+
+### fetching local JSON
+```json
+// user
+{
+    "id": 1,
+    "name": "Rick",
+    "email": "rick@gmail.com"
+}
+
+// users
+[
+    {
+        "id": 1,
+        "name": "Rick",
+        "email": "rick@gmail.com"
+    },
+    {
+        "id": 2,
+        "name": "Glenn",
+        "email": "glenn@gmail.com"
+    },
+    {
+        "id": 3,
+        "name": "Negan",
+        "email": "negan@gmail.com"
+    }
+]
+```
+```html
+<button id="btn1">Get User</button>
+<button id="btn2">Get Users</button>
+
+<h1>User</h1>
+<div id="user"></div>
+
+<h1>Users</h1>
+<div id="users"></div>
+```
+```js
+// Init DOM elements
+const btn1 = document.querySelector('#btn1')
+const btn2 = document.querySelector('#btn2')
+
+// EVENTS
+btn1.addEventListener('click', loadUser)
+btn2.addEventListener('click', loadUsers)
+
+function loadUser() {
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'user.json', true)
+    xhr.onload = (e) => {
+        if (e.target.status === 200) {
+            const userData = JSON.parse(e.target.responseText)
+            document.querySelector('#user').innerHTML = `<ul>\n
+            <li>${userData.name}</li>\n
+            </ul>`
+        } else if (e.target.status === 404) {
+            console.log('Error');
+        }
+    }
+    xhr.send()
+}
+
+function loadUsers() {
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'users.json', true)
+    xhr.onload = (e) => {
+        if (e.target.status === 200) {
+            const usersData = JSON.parse(e.target.responseText)
+
+            let innerMarkup = '';
+            usersData.forEach(item => {
+                innerMarkup += `<li>${item.name}</li>\n`
+            });
+            document.querySelector('#users').innerHTML = `<ul>\n
+            ${innerMarkup}\n
+            </ul>`
+        } else if (e.target.status === 404) {
+            console.log('Error');
+        }
+    }
+    xhr.send()
+}
+```
+
+### fetching external API
+```js
+const btn = document.querySelector('#btn1')
+const users = document.querySelector("#users")
+
+btn.addEventListener('click', loadUsers)
+
+function loadUsers() {
+    var xhr = new XMLHttpRequest()
+    xhr.open('GET', 'https://api.github.com/users', true)
+    xhr.onload = (e) => {
+        if (e.target.status === 200) {
+            const userData = JSON.parse(e.target.responseText)
+            let innerMarkup = ''
+            userData.forEach(item => {
+                innerMarkup += `<img src='${item.avatar_url}' widht=50 height=50>\n
+                <li>${item.login}</li>\n`
+            })
+            users.innerHTML = `<ul>\n${innerMarkup}</ul>`
+        } else if (e.target.status === 404) {
+            console.log('Error')
+        }
+    }
+    xhr.send()
+}
+```
