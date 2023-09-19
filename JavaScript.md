@@ -1280,3 +1280,49 @@ function loadUsers() {
     xhr.send()
 }
 ```
+
+## Fetch API
+- latest method to send & recieve data asynchronously
+
+### Fetching text & JSON
+```js
+document.getElementById('btn-txt').addEventListener('click', loadText)
+document.getElementById('btn-json').addEventListener('click', loadJSON)
+document.getElementById('btn-ext-json').addEventListener('click', loadExternalJson)
+
+// fetching text
+function loadText() {
+    fetch('sample.txt')
+        .then(res => res.text())
+        .then(data => document.getElementById('output').innerHTML = data)
+        .catch(e => console.log(e))
+}
+
+// fetch JSON
+function loadJSON() {
+    fetch('users.json')
+        .then(r => r.json())
+        .then(data => {
+            let inner = ''
+            data.forEach(item => {
+                inner += `<li>${item.name}</li>\n`
+            });
+            document.getElementById('output').innerHTML =
+                `<ul>\n${inner}</ul>`
+        })
+}
+
+// fetch JSON from external API
+function loadExternalJson() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(r => r.json())
+        .then(data => {
+            let inner = ''
+            data.forEach(item => {
+                inner += `<li>${item.name}</li>\n`
+            });
+            document.getElementById('output').innerHTML =
+                `<ul>\n${inner}</ul>`
+        })
+}
+```
