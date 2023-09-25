@@ -161,8 +161,18 @@
 - dyanamic HTML elements creation
 
 ### Project 21
+#### Filterable list
+- lookup for a matched name in the list as we type
+### Project 22
 #### Weight Converter App
 - intractive
 - input validation
 - calculation based on selected units
 - selected unit in first selector is hidden in second seletor
+
+### Project 23
+#### Custom PDF Viewer
+- loads PDF in Canvas using pdfjsLib library
+- pagination
+- shows current pageNumber & total page count
+- error page if pdf is not found
