@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Marker</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Title -->
+        <div class="header">
+            <h1 id="title">BookMarker</h1>
+        </div>
+
+        <hr class="bar">
+        <!-- URL Adder -->
+        <section class="adder">
+            <h2>save your favourite sites</h2>
+            <form id="form">
+                <div>
+                    <label class="input-label">Site Name</label>
+                </div>
+                <div>
+                    <input type="text" class="input-field" id="site-name" placeholder="website Nickname">
+                </div>
+                <div>
+                    <label class="input-label">Site URL</label>
+                </div>
+                <div>
+                    <input type="text" class="input-field" id="site-url" placeholder="website adress">
+                </div>
+                <div>
+                    <button class="btn submit-btn">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Bookmarks list -->
+        <div class="bookmarks-list" id="bookmarks">
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

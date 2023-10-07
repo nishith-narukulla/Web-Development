@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background: #111;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn {
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.message {
+    display: block !important;
+    padding: 20px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid rgba(255, 255, 255, 0.241);
+}
+
+#title {
+    margin-left: 20px;
+    font-weight: 500;
+    color: #888;
+}
+
+.bar {
+    margin: 0 10px;
+}
+
+.adder {
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.adder h2 {
+    font-weight: 300;
+    text-align: center;
+}
+
+.adder .input-label {
+    font-weight: bold;
+}
+
+.adder .input-field {
+    width: 100%;
+    margin-bottom: 0.8rem;
+    padding: 5px 5px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.adder .submit-btn {
+    background: rgb(55, 191, 244);
+    text-align: center;
+}
+
+.bookmarks-list {
+    max-width: 400px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bookmark-item {
+    background-color: rgba(136, 136, 136, 0.3);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.bookmark-item .site-logo {
+    background: #000;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+}
+
+.bookmark-item .site-title {
+    font-size: 1.2rem;
+}
+
+.bookmark-item .controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.controls .visit-btn {
+    background-color: rgb(40, 212, 40);
+    padding: 1px;
+    width: 100%;
+}
+
+.controls .dlt-btn {
+    background-color: red;
+    width: 100%;
+}

@@ -176,3 +176,11 @@
 - pagination
 - shows current pageNumber & total page count
 - error page if pdf is not found
+
+ ### Project 24
+ #### BookMarker App
+ - stores data in localStorage and fetch it
+ - input validation & url RegEx match validation
+ - DOM manipulation
+ - removable functionality
+ - displays bookmarks as soon as the DOM content loads
