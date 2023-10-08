@@ -184,3 +184,9 @@
  - DOM manipulation
  - removable functionality
  - displays bookmarks as soon as the DOM content loads
+
+ ### Project25
+ #### Custom Modal
+ - two modals
+ - can be closable
+ - will be closed if clicked outside

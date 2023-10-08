@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    max-width: 500px;
+    height: 30vh;
+    margin: 35vh auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.centre {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    border: 1px #111 solid;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: 0.9;
+}
+
+.green-btn {
+    background-color: rgb(34, 220, 34);
+}
+
+.red-btn {
+    background-color: rgb(255, 52, 52);
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    opacity: 1;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(244, 244, 244, 0.3);
+}
+
+.modal-content {
+    position: relative;
+    background: #f4f4f4;
+    color: #333;
+    filter: blur(-2px);
+
+    width: 60vh;
+    height: 50vh;
+    margin: 25vh auto;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: start;
+}
+
+form {
+    padding: 20px 30px;
+    width: 90%;
+    height: 70%;
+}
+
+.input-label {
+    display: block;
+}
+
+.input-field {
+    display: block;
+    width: 100%;
+    border: 1px solid #888;
+    border-radius: 5px;
+    outline: 0;
+    margin-bottom: 0.8rem;
+    padding: 5px 10px;
+}
+
+.submit-btn {
+    margin: 10px 0px;
+    width: 100%;
+}
+
+#signup-modal {
+    display: none;
+}
+
+#signin-modal {
+    display: none;
+}
