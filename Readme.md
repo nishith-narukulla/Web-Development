@@ -190,3 +190,11 @@
  - two modals
  - can be closable
  - will be closed if clicked outside
+
+ ### Project26
+ #### Text to Speech converter
+ - speechSynthesis web API
+ - bootstarp
+ - number of voices fetched from API
+ - adjustable speed & pitch
+ - fires event once done with speaking, on error or if already speaking
